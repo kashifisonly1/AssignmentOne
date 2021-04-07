@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayCounting"
+    android:background="@drawable/bg2">
+
+    <ImageView
+        android:id="@+id/oneImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/one"
+        android:onClick="oneClicked"/>
+
+    <ImageView
+        android:id="@+id/twoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/oneImage"
+        app:layout_constraintTop_toTopOf="@+id/oneImage"
+        app:srcCompat="@drawable/two"
+        android:onClick="twoClicked"/>
+
+    <ImageView
+        android:id="@+id/threeImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/twoImage"
+        app:layout_constraintTop_toTopOf="@+id/twoImage"
+        app:srcCompat="@drawable/three"
+        android:onClick="threeClicked"/>
+
+    <ImageView
+        android:id="@+id/fourImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/oneImage"
+        app:layout_constraintTop_toBottomOf="@+id/oneImage"
+        app:srcCompat="@drawable/four"
+        android:onClick="fourClicked"/>
+
+    <ImageView
+        android:id="@+id/fiveImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/fourImage"
+        app:layout_constraintTop_toTopOf="@+id/fourImage"
+        app:srcCompat="@drawable/five"
+        android:onClick="fiveClicked"/>
+
+    <ImageView
+        android:id="@+id/sixImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/fiveImage"
+        app:layout_constraintTop_toTopOf="@+id/fourImage"
+        app:srcCompat="@drawable/six"
+        android:onClick="sixClicked"/>
+
+    <ImageView
+        android:id="@+id/seventImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/fourImage"
+        app:layout_constraintTop_toBottomOf="@+id/fourImage"
+        app:srcCompat="@drawable/seven"
+        android:onClick="sevenClicked"/>
+
+    <ImageView
+        android:id="@+id/eightImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/seventImage"
+        app:layout_constraintTop_toTopOf="@+id/seventImage"
+        app:srcCompat="@drawable/eight"
+        android:onClick="eightClicked"/>
+
+    <ImageView
+        android:id="@+id/nineImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/eightImage"
+        app:layout_constraintTop_toTopOf="@+id/eightImage"
+        app:srcCompat="@drawable/nine"
+        android:onClick="nineClicked"/>
+
+    <ImageView
+        android:id="@+id/tenImage2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/tenImage1"
+        app:layout_constraintTop_toTopOf="@+id/tenImage1"
+        app:srcCompat="@drawable/zero"
+        android:onClick="tenClicked"/>
+
+    <ImageView
+        android:id="@+id/tenImage1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:onClick="tenClicked"
+        app:layout_constraintStart_toStartOf="@+id/seventImage"
+        app:layout_constraintTop_toBottomOf="@+id/seventImage"
+        app:srcCompat="@drawable/one" />
+
+    <ImageButton
+        android:id="@+id/homebutton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tenImage1"
+        android:onClick="gotoHome"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
