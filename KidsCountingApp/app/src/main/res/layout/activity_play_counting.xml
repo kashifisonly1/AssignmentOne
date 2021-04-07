@@ -11,30 +11,30 @@
         android:id="@+id/oneImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
+        android:onClick="oneClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/one"
-        android:onClick="oneClicked"/>
+        app:srcCompat="@drawable/one" />
 
     <ImageView
         android:id="@+id/twoImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:onClick="twoClicked"
+        app:layout_constraintEnd_toStartOf="@+id/threeImage"
         app:layout_constraintStart_toEndOf="@+id/oneImage"
         app:layout_constraintTop_toTopOf="@+id/oneImage"
-        app:srcCompat="@drawable/two"
-        android:onClick="twoClicked"/>
+        app:srcCompat="@drawable/two" />
 
     <ImageView
         android:id="@+id/threeImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:layout_constraintStart_toEndOf="@+id/twoImage"
+        android:onClick="threeClicked"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/twoImage"
-        app:srcCompat="@drawable/three"
-        android:onClick="threeClicked"/>
+        app:srcCompat="@drawable/three" />
 
     <ImageView
         android:id="@+id/fourImage"
@@ -50,19 +50,20 @@
         android:id="@+id/fiveImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:onClick="fiveClicked"
+        app:layout_constraintEnd_toStartOf="@+id/sixImage"
         app:layout_constraintStart_toEndOf="@+id/fourImage"
         app:layout_constraintTop_toTopOf="@+id/fourImage"
-        app:srcCompat="@drawable/five"
-        android:onClick="fiveClicked"/>
+        app:srcCompat="@drawable/five" />
 
     <ImageView
         android:id="@+id/sixImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:layout_constraintStart_toEndOf="@+id/fiveImage"
+        android:onClick="sixClicked"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fourImage"
-        app:srcCompat="@drawable/six"
-        android:onClick="sixClicked"/>
+        app:srcCompat="@drawable/six" />
 
     <ImageView
         android:id="@+id/seventImage"
@@ -78,28 +79,29 @@
         android:id="@+id/eightImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:onClick="eightClicked"
+        app:layout_constraintEnd_toStartOf="@+id/nineImage"
         app:layout_constraintStart_toEndOf="@+id/seventImage"
         app:layout_constraintTop_toTopOf="@+id/seventImage"
-        app:srcCompat="@drawable/eight"
-        android:onClick="eightClicked"/>
+        app:srcCompat="@drawable/eight" />
 
     <ImageView
         android:id="@+id/nineImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:layout_constraintStart_toEndOf="@+id/eightImage"
+        android:onClick="nineClicked"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/eightImage"
-        app:srcCompat="@drawable/nine"
-        android:onClick="nineClicked"/>
+        app:srcCompat="@drawable/nine" />
 
     <ImageView
         android:id="@+id/tenImage2"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:onClick="tenClicked"
         app:layout_constraintStart_toEndOf="@+id/tenImage1"
         app:layout_constraintTop_toTopOf="@+id/tenImage1"
-        app:srcCompat="@drawable/zero"
-        android:onClick="tenClicked"/>
+        app:srcCompat="@drawable/zero" />
 
     <ImageView
         android:id="@+id/tenImage1"
@@ -115,9 +117,8 @@
         android:id="@+id/homebutton"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/home"
+        android:onClick="gotoHome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tenImage1"
-        android:onClick="gotoHome"/>
+        app:layout_constraintTop_toTopOf="@+id/tenImage1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
