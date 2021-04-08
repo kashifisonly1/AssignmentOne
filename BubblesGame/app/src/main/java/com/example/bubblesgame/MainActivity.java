@@ -1,28 +1,16 @@
 package com.example.bubblesgame;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     private Handler handler = new Handler();
@@ -83,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
         textView.setTextSize(24);
         textView.setLayoutParams(lpe);
         root.addView(textView);
-        Button btn = new Button(this);
-        LayoutParams lpb = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        lpb.addRule(RelativeLayout.BELOW, textView.getId());
-        lpb.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        btn.setText("Home Page");
-        btn.setLayoutParams(lpb);
-        btn.setOnClickListener(this::goToHome);
-        root.addView(btn);
     }
     private void goToHome(View view){
         bgSound.stop();
@@ -99,11 +79,9 @@ public class MainActivity extends AppCompatActivity {
     }
     private void addImage(){
         for(int i = 0; i<bubblesCount; i++) {
-
             ImageView img = new ImageView(getApplicationContext());
             Random rand = new Random();
             int randomNumber = rand.nextInt(Math.round(screenWidth - 80));
-
             img.setOnClickListener(this::removeBubble);
             img.setImageDrawable(getDrawable(R.drawable.bubble));
             img.animate().translationYBy(screenHeight).setDuration(speed * 1000).withEndAction(livesDown);
