@@ -25,4 +25,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this, PlayCounting.class);
         startActivity(intent);
     }
+    public void startGame(View view) {
+        mediaPlayer.stop();
+        Intent intent= new Intent(this, BubbleGame.class);
+        startActivity(intent);
+    }
+
 }
