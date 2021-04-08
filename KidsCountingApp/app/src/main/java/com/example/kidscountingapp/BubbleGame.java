@@ -41,6 +41,13 @@ public class BubbleGame extends AppCompatActivity {
         livesView=findViewById(R.id.lives);
         handler.postDelayed(addingImages, delayTime);
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        bgSound.stop();
+    }
+
     private Runnable addingImages = new Runnable() {
         @Override
         public void run() {

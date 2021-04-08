@@ -19,6 +19,11 @@ public class PlayCounting extends AppCompatActivity {
         mediaPlayer.setVolume(0,0.2f);
         mediaPlayer.start();
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+    }
 
     public void oneClicked(View view) {
         view.animate().rotationXBy(360).setDuration(1000);

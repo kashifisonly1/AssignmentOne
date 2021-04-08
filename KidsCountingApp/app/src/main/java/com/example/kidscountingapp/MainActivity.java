@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.setVolume(0,0.2f);
         mediaPlayer.start();
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+    }
 
     public void startApp(View view) {
         mediaPlayer.stop();
